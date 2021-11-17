@@ -1,0 +1,46 @@
+@import "scss/mixins";
+@import "scss/variables";
+
+.wrapper{
+   padding: 3rem;
+   width: 80%;
+   margin: 0 auto;
+
+   .container{
+      background-color: $color-white;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      .infoField {
+         display: flex;
+         padding: 1rem;
+         flex: 1;
+         border-bottom: 1px solid gray;
+         > div{
+            text-align: center;
+            flex: 1;
+            &:first-child{
+               font-weight: 700;
+            }
+         }
+         &:last-child{
+            border-bottom: unset;
+         }
+      }
+
+   }
+
+   @include for-size(tablet-landscape-up){
+        width: 60%;
+   }
+
+   @include for-size(phone-only){
+        padding: 3rem 1rem;
+        width: 100%;
+        .container {
+           .infoField {
+              flex-direction: column;
+           }
+        }
+   }
+
+}

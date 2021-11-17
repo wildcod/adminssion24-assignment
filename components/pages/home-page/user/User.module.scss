@@ -1,0 +1,12 @@
+.wrapper {
+   cursor: pointer;
+   h2 {
+      text-align: center;
+      text-transform: capitalize;
+   }
+   > div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
